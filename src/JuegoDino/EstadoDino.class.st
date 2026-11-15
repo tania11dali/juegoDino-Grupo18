@@ -19,15 +19,16 @@ EstadoDino >> agachar: unDino [
 ]
 
 { #category : 'actions' }
+EstadoDino >> alturaDelArea: unDino [
+^self subclassResponsibility 
+]
+
+{ #category : 'actions' }
 EstadoDino >> levantarse: unDino [
 ^self subclassResponsibility 
 ]
 
 { #category : 'actions' }
 EstadoDino >> saltar: unDino [
-^self subclassResponsibility 
-]
-{ #category : 'actions' }
-EstadoDino >> alturaDelArea: unDino [
 ^self subclassResponsibility 
 ]

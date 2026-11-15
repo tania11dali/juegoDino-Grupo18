@@ -82,6 +82,7 @@ Partida >> initialize [
     estado := #preparada.
     proximoUmbralDificultad := 5.
     obstaculosSuperados := 0.
+    dino := Dino new.
 ]
 
 { #category : 'control de partida' }
