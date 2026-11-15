@@ -27,3 +27,7 @@ EstadoDino >> levantarse: unDino [
 EstadoDino >> saltar: unDino [
 ^self subclassResponsibility 
 ]
+{ #category : 'actions' }
+EstadoDino >> alturaDelArea: unDino [
+^self subclassResponsibility 
+]
