@@ -42,7 +42,7 @@ Dificultad class >> velocidadMaxima [
 	^ 18
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'dificultad' }
 Dificultad >> aumentar [
 	velocidad := (velocidad + self class incrementoDeVelocidad) min: self class velocidadMaxima.
 	distanciaEntreObstaculos := (distanciaEntreObstaculos - self class reduccionDeDistancia) max: self class distanciaMinima

@@ -23,7 +23,7 @@ EstadoSaltando >> agachar: unDino [
 
 { #category : 'actions' }
 EstadoSaltando >> alturaDelArea: unDino [
-^Dino alturaNormal
+ ^ unDino class alturaNormal 
 ]
 
 { #category : 'actions' }
@@ -32,6 +32,6 @@ EstadoSaltando >> levantarse: unDino [
 ]
 
 { #category : 'actions' }
-EstadoSaltando >> saltar:unDino [
+EstadoSaltando >> saltar: unDino [
 "ya salta"
 ]

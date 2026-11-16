@@ -34,6 +34,11 @@ Dino class >> gravedad [
 ]
 
 { #category : 'constants' }
+Dino class >> impulsoInicial [
+^15
+]
+
+{ #category : 'constants' }
 Dino class >> impulsoinicial [
 ^15
 ]
@@ -87,7 +92,7 @@ Dino >> estaEnElSuelo [
 
 { #category : 'physics' }
 Dino >> impulsarSalto [
-velocidadVertical := self class impulsoinicial negated
+velocidadVertical := self class impulsoInicial negated
 ]
 
 { #category : 'initialization' }
