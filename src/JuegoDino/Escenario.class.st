@@ -1,3 +1,6 @@
+"
+Escenario administra los elementos del recorrido: la colección de obstáculos y la de monedas, con sus generadores y la dificultad. Los hace avanzar, retira los que salen de pantalla, detecta colisiones y recolecciones con el Dino y cuenta los obstáculos esquivados. No decide el estado de la partida ni dibuja.
+"
 Class {
 	#name : 'Escenario',
 	#superclass : 'Object',
