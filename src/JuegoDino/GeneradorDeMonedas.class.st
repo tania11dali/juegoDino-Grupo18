@@ -22,7 +22,12 @@ Class {
 
 { #category : 'constants' }
 GeneradorDeMonedas class >> alturaDeAparicion [
-    ^ 220
+    ^ 60
+]
+
+{ #category : 'initialization' }
+GeneradorDeMonedas class >> con: unaDificultad [
+	^ self new con: unaDificultad
 ]
 
 { #category : 'constants' }
@@ -43,10 +48,10 @@ GeneradorDeMonedas >> con: unaDificultad [
 
 { #category : 'creation' }
 GeneradorDeMonedas >> crearMonedaEn: unaPosicionX [
-    | moneda |
-    moneda := Moneda new.
-    moneda posicionarEn: unaPosicionX @ self class alturaDeAparicion.
-    ^ moneda
+	| moneda |
+	moneda := Moneda new.
+	moneda posicionarEn: unaPosicionX @ (Dino sueloY - self class alturaDeAparicion - moneda alto).
+	^ moneda
 
 ]
 
