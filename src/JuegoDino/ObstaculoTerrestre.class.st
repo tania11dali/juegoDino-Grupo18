@@ -15,7 +15,7 @@ ObstaculoTerrestre >> alto [
 
 { #category : 'consultas' }
 ObstaculoTerrestre >> alturaSobreElSuelo [
-	^ 40
+	^ 0
 ]
 
 { #category : 'dimensiones' }
