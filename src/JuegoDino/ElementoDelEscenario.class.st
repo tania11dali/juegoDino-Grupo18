@@ -11,12 +11,12 @@ Class {
 	#package : 'JuegoDino'
 }
 
-{ #category : 'as yet unclassified' }
+{ #category : 'dimensiones' }
 ElementoDelEscenario >> alto [
     self subclassResponsibility
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'dimensiones' }
 ElementoDelEscenario >> ancho [
     self subclassResponsibility
 ]

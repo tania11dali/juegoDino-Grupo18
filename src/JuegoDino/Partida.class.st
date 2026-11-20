@@ -80,9 +80,10 @@ Partida >> initialize [
     super initialize.
     puntaje := 0.
     estado := #preparada.
-    proximoUmbralDificultad := 5.
+    proximoUmbralDificultad := self obstaculosPorNivel.
     obstaculosSuperados := 0.
     dino := Dino new.
+    escenario := Escenario new.
 ]
 
 { #category : 'control de partida' }

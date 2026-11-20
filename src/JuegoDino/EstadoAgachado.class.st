@@ -20,7 +20,7 @@ EstadoAgachado >> agachar: unDino [
 
 { #category : 'actions' }
 EstadoAgachado >> alturaDelArea: unDino [
-^Dino alturaAgachado
+ ^ unDino class alturaAgachado 
 ]
 
 { #category : 'actions' }

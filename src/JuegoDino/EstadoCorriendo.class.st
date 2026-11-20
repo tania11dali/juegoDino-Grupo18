@@ -20,7 +20,7 @@ unDino cambiarEstadoA: EstadoAgachado new.
 
 { #category : 'actions' }
 EstadoCorriendo >> alturaDelArea: unDino [
-^Dino alturaNormal 
+  ^ unDino class alturaNormal 
 ]
 
 { #category : 'actions' }
