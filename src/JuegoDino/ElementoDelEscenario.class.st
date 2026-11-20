@@ -1,5 +1,11 @@
 "
-clase de elementodelescenario
+ElementoDelEscenario es una clase abstracta que representa los elementos que forman parte del escenario del juego.
+
+Almacena la posicion de cada elemento y define el comportamiento comun de sus subclases.
+
+Permite reutilizar codigo mediante la herencia y tratar los distintos elementos del escenario de manera uniforme mediante el polimorfismo.
+
+Sus subclases representan las monedas y los obstaculos del juego.
 "
 Class {
 	#name : 'ElementoDelEscenario',
