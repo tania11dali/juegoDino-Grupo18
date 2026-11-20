@@ -1,3 +1,6 @@
+"
+clase de elementodelescenario
+"
 Class {
 	#name : 'ElementoDelEscenario',
 	#superclass : 'Object',
