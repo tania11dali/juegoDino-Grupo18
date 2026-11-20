@@ -1,5 +1,5 @@
 "
-ElementoDelEscenario es una clase abstracta que reúne lo común a los elementos que se desplazan por el escenario: una posición (esquina superior izquierda de su área), el avance hacia la izquierda, un área rectangular y la comprobación de salida de pantalla. Las subclases definen ancho y alto.
+clase de elementodelescenario
 "
 Class {
 	#name : 'ElementoDelEscenario',
