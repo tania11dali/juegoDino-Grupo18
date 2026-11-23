@@ -16,6 +16,11 @@ Class {
 	#package : 'JuegoDino'
 }
 
+{ #category : 'constants' }
+Escenario class >> margenMonedas [
+	^ 60
+]
+
 { #category : 'dificultad' }
 Escenario >> aumentarDificultad [
 	dificultad aumentar
@@ -27,14 +32,16 @@ Escenario >> avanzar [
 	velocidad := dificultad velocidad.
 	obstaculos do: [ :cadaUno | cadaUno avanzar: velocidad ].
 	monedas do: [ :cadaUna | cadaUna avanzar: velocidad ].
-	
+
 	nuevoObstaculo := generadorDeObstaculos generarSiCorresponde: anchoVisible.
-	nuevoObstaculo ifNotNil: [ obstaculos add: nuevoObstaculo ].
-	
+	nuevoObstaculo ifNotNil: [
+		obstaculos add: nuevoObstaculo.
+		self retirarMonedasCercaDe: nuevoObstaculo ].
+
 	nuevaMoneda := generadorDeMonedas generarSiCorresponde: anchoVisible.
 	(nuevaMoneda notNil and: [ (self hayObstaculoSuperpuestoCon: nuevaMoneda) not ])
 		ifTrue: [ monedas add: nuevaMoneda ].
-		
+
 	self retirarObstaculosFueraDePantalla.
 	self retirarMonedasFueraDePantalla
 ]
@@ -43,7 +50,9 @@ Escenario >> avanzar [
 Escenario >> hayObstaculoSuperpuestoCon: unaMoneda [
 	| areaMoneda |
 	areaMoneda := unaMoneda area.
-	^ obstaculos anySatisfy: [ :cadaUno | cadaUno area intersects: areaMoneda ]
+	^ obstaculos anySatisfy: [ :cadaUno |
+		cadaUno area left - self class margenMonedas < areaMoneda right
+			and: [ cadaUno area right + self class margenMonedas > areaMoneda left ] ]
 ]
 
 { #category : 'initialization' }
@@ -92,6 +101,15 @@ Escenario >> recolectarMonedasPor: unDino [
 	recolectadas := monedas select: [ :cadaUna | cadaUna area intersects: areaDino ].
 	monedas removeAll: recolectadas.
 	^ recolectadas size
+]
+
+{ #category : 'private' }
+Escenario >> retirarMonedasCercaDe: unObstaculo [
+	| area |
+	area := unObstaculo area.
+	monedas removeAllSuchThat: [ :cadaUna |
+		area left - self class margenMonedas < cadaUna area right
+			and: [ area right + self class margenMonedas > cadaUna area left ] ]
 ]
 
 { #category : 'private' }

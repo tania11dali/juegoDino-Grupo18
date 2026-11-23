@@ -32,12 +32,12 @@ GeneradorDeMonedas class >> con: unaDificultad [
 
 { #category : 'constants' }
 GeneradorDeMonedas class >> distanciaEntreMonedas [
-    ^ 300
+    ^ 400
 ]
 
 { #category : 'constants' }
 GeneradorDeMonedas class >> variacionDeDistancia [
-    ^ 100
+    ^ 150
 ]
 
 { #category : 'initialization' }

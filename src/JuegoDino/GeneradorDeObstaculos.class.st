@@ -27,7 +27,9 @@ Class {
 	#instVars : [
 		'dificultad',
 		'distanciaPendiente',
-		'azar'
+		'azar',
+		'repeticiones',
+		'ultimaClase'
 	],
 	#category : 'JuegoDino',
 	#package : 'JuegoDino'
@@ -36,6 +38,11 @@ Class {
 { #category : 'initialization' }
 GeneradorDeObstaculos class >> con: unaDificultad [
     ^ self new con: unaDificultad
+]
+
+{ #category : 'constants' }
+GeneradorDeObstaculos class >> maximoSeguidos [ 
+^ 2
 ]
 
 { #category : 'constants' }
@@ -66,9 +73,18 @@ GeneradorDeObstaculos >> crearObstaculoEn: unaPosicionX [
 
 { #category : 'creation' }
 GeneradorDeObstaculos >> elegirObstaculo [
-    azar next < self class probabilidadTerrestre
-        ifTrue: [ ^ ObstaculoTerrestre new ].
-    ^ ObstaculoAereo new
+	| clase |
+	clase := azar next < self class probabilidadTerrestre
+		ifTrue: [ ObstaculoTerrestre ]
+		ifFalse: [ ObstaculoAereo ].
+	(clase == ultimaClase and: [ repeticiones >= self class maximoSeguidos ])
+		ifTrue: [
+			clase := clase == ObstaculoTerrestre
+				ifTrue: [ ObstaculoAereo ]
+				ifFalse: [ ObstaculoTerrestre ] ].
+	repeticiones := clase == ultimaClase ifTrue: [ repeticiones + 1 ] ifFalse: [ 1 ].
+	ultimaClase := clase.
+	^ clase new
 ]
 
 { #category : 'generating' }
@@ -83,7 +99,8 @@ GeneradorDeObstaculos >> generarSiCorresponde: unaPosicionX [
 GeneradorDeObstaculos >> initialize [
     super initialize.
     azar := Random new.
-    distanciaPendiente := 0
+    distanciaPendiente := 0.
+	 repeticiones := 0 
 ]
 
 { #category : 'initialization' }
