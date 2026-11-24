@@ -7,7 +7,7 @@ escenario 8 «Dino») de **Paradigmas de Programación**.
 > UTN – Facultad Regional Resistencia · Ingeniería en Sistemas de Información
 > Grupo 18 · Comisión 2.2 · 2026
 
-> **Repositorio:** https://github.com/tania11dali/juego-dino (rama `main`)
+> **Repositorio:** https://github.com/tania11dali/juegoDino-Grupo18 (rama `main`)
 
 El Dino corre automáticamente. El jugador salta o se agacha para esquivar obstáculos y puede
 recolectar monedas. La partida termina con la primera colisión, muestra el puntaje y permite
