@@ -39,6 +39,7 @@ formato Tonel (`src/JuegoDino/`).
 2. Abrir **Browse**: menú *Git Repositories Browser*.
 3. Tocar **+ Add** y elegir **Clone from github.com**.
 4. Completar *Owner Name* = `tania11dali`, *Project Name* = `juegoDino-Grupo18`, *Local Directory* = carpeta en donde se va a guardar,  *Protocol* = `HTTPS` y tocar **OK**.
+5. Completar *Usarname* = `tu nombre de usuario de GitHub` y *Password* = `tu Personal Acess Token (PAT) de GitHub`
 6. En Iceberg, abrir el repositorio `juego-dino`, ir a la pestaña **Packages** y, sobre
    `JuegoDino`, elegir **Load package** (clic derecho).
 7. Esperar a que termine la carga. Para verificarla, abrir el *System Browser*
