@@ -13,6 +13,8 @@ El Dino corre automáticamente. El jugador salta o se agacha para esquivar obst�
 recolectar monedas. La partida termina con la primera colisión, muestra el puntaje y permite
 empezar otra.
 
+## Vista previa del juego
+
 ## Integrantes
 
 - Antoniazzi, Ariadna Abril
@@ -36,20 +38,17 @@ Smalltalk no se compila: el código se carga en una imagen de Pharo. El reposito
 formato Tonel (`src/JuegoDino/`).
 
 1. Abrir una imagen de Pharo 14 (por ejemplo, desde Pharo Launcher).
-2. Abrir **Browse**: menú *Git Repositories Browser*.
+2. Abrir el navegador de repositorios Git desde el menú **Browse → Git Repositories Browser**.
 3. Tocar **+ Add** y elegir **Clone from github.com**.
-4. Completar *Owner Name* = `tania11dali`, *Project Name* = `juegoDino-Grupo18`, *Local Directory* = carpeta en donde se va a guardar,  *Protocol* = `HTTPS` y tocar **OK**.
-5. Completar *Usarname* = `tu nombre de usuario de GitHub` y *Password* = `tu Personal Acess Token (PAT) de GitHub`
-6. En Iceberg, abrir el repositorio `juego-dino`, ir a la pestaña **Packages** y, sobre
-   `JuegoDino`, elegir **Load package** (clic derecho).
+4. Completar *Owner Name* = `tania11dali`, *Project Name* = `juegoDino-Grupo18`, *Local Directory* = carpeta en donde se va a guardará el repositorio,  *Protocol* = `HTTPS` y tocar **OK**.
+5. Completar *Username* = `tu nombre de usuario de GitHub` y *Password* = `tu Personal Access Token (PAT) de GitHub`, con permisos de lectura sobre el repositorio.
+6. En Repositories, abrir el repositorio `juegoDino-Grupo18`, sobre `JuegoDino` hacer clic derecho, elegir **+ Load**.
 7. Esperar a que termine la carga. Para verificarla, abrir el *System Browser*
    (*Browse → System Browser*): tiene que aparecer el package `JuegoDino` con **19 clases**.
-
-Los nombres de los menús pueden variar levemente entre versiones de Pharo.
-
+   
 ## Cómo ejecutar
 
-Abrir un **Playground** (*Library → Playground*), escribir lo siguiente y ejecutarlo con
+Abrir un **Playground** (*Browse → Playground*), escribir lo siguiente y ejecutarlo con
 *Do it* (`Ctrl+D`):
 
 ```smalltalk
@@ -128,15 +127,14 @@ Se probó ejecutando el juego en Pharo 14. Casos para la demostración:
 
 ## Documentación
 
-- **Informe técnico (PDF):** análisis, modelo de objetos, implementación y resultados.
+- **Informe técnico Paper (PDF):** análisis, modelo de objetos, implementación y resultados. Con la finalidad de registrar la experiencia de la creación del juego dino.
 - **Diagrama de clases:** https://drive.google.com/file/d/1EY4CzwKUWCPrdwqgpmQ840N2IAxmgegb/view?usp=drive_link
-- Cada clase tiene su *class comment* en Pharo con su responsabilidad.
+- **Diapositiva (PDF):** utilizada por el equipo durante la exposición.
+
 
 ## Sin conexión a internet
 
-Una vez cargado el package, el juego no necesita internet. Para la defensa conviene cargar el
-proyecto con anticipación y guardar la imagen (menú *Pharo → Save*), así se abre ya lista y sin
-instalaciones de último momento.
+Una vez cargado el package, el juego no necesita internet. 
 
 ## Problemas frecuentes
 
