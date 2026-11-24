@@ -127,8 +127,10 @@ Se probó ejecutando el juego en Pharo 14. Casos para la demostración:
 
 ## Documentación
 
-- **Informe técnico Paper (PDF):** análisis, modelo de objetos, implementación y resultados. Con la finalidad de registrar la experiencia de la creación del juego dino. Link: https://drive.google.com/file/d/1-hRjqkTG3H4zUPitYwUubIjIfg0X8KTK/view?usp=sharing
-- **Diagrama de clases:** muestra las clases que componen el juego, sus responsabilidades y las relaciones entre ellas. Link: https://drive.google.com/file/d/1UBV4kj0_EiHvUzpnRLOfmq9V2ztVdQ3Q/view?usp=sharing
+- **Informe técnico Paper (PDF):** análisis, modelo de objetos, implementación y resultados. Con la finalidad de registrar la experiencia de la creación del juego dino.
+  Link: https://drive.google.com/file/d/1-hRjqkTG3H4zUPitYwUubIjIfg0X8KTK/view?usp=sharing
+- **Diagrama de clases:** muestra las clases que componen el juego, sus responsabilidades y las relaciones entre ellas.
+  Link: https://drive.google.com/file/d/1UBV4kj0_EiHvUzpnRLOfmq9V2ztVdQ3Q/view?usp=sharing
 - **Diapositiva (PDF):** utilizada por el equipo durante la exposición.
 
 
